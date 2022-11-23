@@ -34,8 +34,7 @@ def menu_report():
     return f"Products Count: {contagem} - Average Price: ${media:.1f} - Most Common Type: {most_commun_type}"
 
 def add_product(list_products, **new_product):
-    id = len(products) + 1
-    print(id)
+    id = len(list_products) + 1
     new_product["_id"] = id
     list_products.append(new_product)
     print(list_products)

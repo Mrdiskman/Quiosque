@@ -15,5 +15,5 @@ def calculate_tab(table: list):
             if item["_id"] == id:
                 value_list.append(item["price"])
 
-    sub_total = f"$%.2f" % sum([a*b for a,b in zip(ammount_list, value_list)])
-    return {"subtotal": round(sub_total)}
+    sub_total = round(sum([a*b for a,b in zip(ammount_list, value_list)]), 2)
+    return {"subtotal": f"${sub_total}"}
